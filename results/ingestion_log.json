@@ -1,0 +1,1097 @@
+{
+  "manifest_path": "D:\\AI thuc chien\\K5-L3A-DAY06-2A202603573-DataIngestion\\data\\manifest.json",
+  "pdf_parse_seconds": 0.196,
+  "included_pages": 95,
+  "excluded_pages": 17,
+  "empty_or_unreadable_pages": 0,
+  "total_normalized_chars": 237024,
+  "documents": [
+    {
+      "source_id": "nist-ai-100-1",
+      "source_path": "starter/data/NIST.AI.100-1.pdf",
+      "physical_pages": 48,
+      "included_pages": 42,
+      "excluded_pages": 6,
+      "normalized_chars": 99497
+    },
+    {
+      "source_id": "nist-ai-600-1",
+      "source_path": "starter/data/NIST.AI.600-1.pdf",
+      "physical_pages": 64,
+      "included_pages": 53,
+      "excluded_pages": 11,
+      "normalized_chars": 137527
+    }
+  ],
+  "pages": [
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 1,
+      "status": "excluded",
+      "reason": "cover_page"
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 2,
+      "status": "excluded",
+      "reason": "title_doi_publication_notice"
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 3,
+      "status": "excluded",
+      "reason": "disclaimer_and_update_schedule_front_matter"
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 4,
+      "status": "excluded",
+      "reason": "table_of_contents"
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 5,
+      "status": "excluded",
+      "reason": "list_of_figures"
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 6,
+      "page_id": "nist-ai-100-1-p006",
+      "status": "included",
+      "section": "executive_summary",
+      "raw_chars": 3108,
+      "normalized_chars": 3061
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 7,
+      "page_id": "nist-ai-100-1-p007",
+      "status": "included",
+      "section": "executive_summary",
+      "raw_chars": 3100,
+      "normalized_chars": 3062
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 8,
+      "page_id": "nist-ai-100-1-p008",
+      "status": "included",
+      "section": "executive_summary",
+      "raw_chars": 1872,
+      "normalized_chars": 1833
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 9,
+      "page_id": "nist-ai-100-1-p009",
+      "status": "included",
+      "section": "framing_risk",
+      "raw_chars": 2752,
+      "normalized_chars": 2715
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 10,
+      "page_id": "nist-ai-100-1-p010",
+      "status": "included",
+      "section": "framing_risk",
+      "raw_chars": 1888,
+      "normalized_chars": 1858
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 11,
+      "page_id": "nist-ai-100-1-p011",
+      "status": "included",
+      "section": "framing_risk",
+      "raw_chars": 2771,
+      "normalized_chars": 2734
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 12,
+      "page_id": "nist-ai-100-1-p012",
+      "status": "included",
+      "section": "framing_risk",
+      "raw_chars": 2965,
+      "normalized_chars": 2929
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 13,
+      "page_id": "nist-ai-100-1-p013",
+      "status": "included",
+      "section": "framing_risk",
+      "raw_chars": 3132,
+      "normalized_chars": 3098
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 14,
+      "page_id": "nist-ai-100-1-p014",
+      "status": "included",
+      "section": "audience",
+      "raw_chars": 3059,
+      "normalized_chars": 3020
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 15,
+      "page_id": "nist-ai-100-1-p015",
+      "status": "included",
+      "section": "audience",
+      "raw_chars": 1584,
+      "normalized_chars": 1551
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 16,
+      "page_id": "nist-ai-100-1-p016",
+      "status": "included",
+      "section": "audience",
+      "raw_chars": 410,
+      "normalized_chars": 378
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 17,
+      "page_id": "nist-ai-100-1-p017",
+      "status": "included",
+      "section": "ai_risks_and_trustworthiness",
+      "raw_chars": 2649,
+      "normalized_chars": 2604
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 18,
+      "page_id": "nist-ai-100-1-p018",
+      "status": "included",
+      "section": "ai_risks_and_trustworthiness",
+      "raw_chars": 2993,
+      "normalized_chars": 2950
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 19,
+      "page_id": "nist-ai-100-1-p019",
+      "status": "included",
+      "section": "ai_risks_and_trustworthiness",
+      "raw_chars": 2782,
+      "normalized_chars": 2747
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 20,
+      "page_id": "nist-ai-100-1-p020",
+      "status": "included",
+      "section": "ai_risks_and_trustworthiness",
+      "raw_chars": 3130,
+      "normalized_chars": 3091
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 21,
+      "page_id": "nist-ai-100-1-p021",
+      "status": "included",
+      "section": "ai_risks_and_trustworthiness",
+      "raw_chars": 2929,
+      "normalized_chars": 2892
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 22,
+      "page_id": "nist-ai-100-1-p022",
+      "status": "included",
+      "section": "ai_risks_and_trustworthiness",
+      "raw_chars": 2830,
+      "normalized_chars": 2794
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 23,
+      "page_id": "nist-ai-100-1-p023",
+      "status": "included",
+      "section": "ai_risks_and_trustworthiness",
+      "raw_chars": 1679,
+      "normalized_chars": 1636
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 24,
+      "page_id": "nist-ai-100-1-p024",
+      "status": "included",
+      "section": "effectiveness",
+      "raw_chars": 1891,
+      "normalized_chars": 1847
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 25,
+      "page_id": "nist-ai-100-1-p025",
+      "status": "included",
+      "section": "core_overview",
+      "raw_chars": 1287,
+      "normalized_chars": 1252
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 26,
+      "page_id": "nist-ai-100-1-p026",
+      "status": "included",
+      "section": "govern",
+      "raw_chars": 2695,
+      "normalized_chars": 2657
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 27,
+      "page_id": "nist-ai-100-1-p027",
+      "status": "included",
+      "section": "govern",
+      "raw_chars": 2439,
+      "normalized_chars": 2359
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 28,
+      "page_id": "nist-ai-100-1-p028",
+      "status": "included",
+      "section": "govern",
+      "raw_chars": 2310,
+      "normalized_chars": 2223
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 29,
+      "page_id": "nist-ai-100-1-p029",
+      "status": "included",
+      "section": "govern",
+      "raw_chars": 2471,
+      "normalized_chars": 2417
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 30,
+      "page_id": "nist-ai-100-1-p030",
+      "status": "included",
+      "section": "map",
+      "raw_chars": 2766,
+      "normalized_chars": 2725
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 31,
+      "page_id": "nist-ai-100-1-p031",
+      "status": "included",
+      "section": "map",
+      "raw_chars": 2095,
+      "normalized_chars": 2010
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 32,
+      "page_id": "nist-ai-100-1-p032",
+      "status": "included",
+      "section": "map",
+      "raw_chars": 2335,
+      "normalized_chars": 2250
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 33,
+      "page_id": "nist-ai-100-1-p033",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 2748,
+      "normalized_chars": 2675
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 34,
+      "page_id": "nist-ai-100-1-p034",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 2104,
+      "normalized_chars": 2023
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 35,
+      "page_id": "nist-ai-100-1-p035",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 2065,
+      "normalized_chars": 1984
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 36,
+      "page_id": "nist-ai-100-1-p036",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 2394,
+      "normalized_chars": 2331
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 37,
+      "page_id": "nist-ai-100-1-p037",
+      "status": "included",
+      "section": "manage",
+      "raw_chars": 2266,
+      "normalized_chars": 2189
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 38,
+      "page_id": "nist-ai-100-1-p038",
+      "status": "included",
+      "section": "manage",
+      "raw_chars": 2663,
+      "normalized_chars": 2604
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 39,
+      "page_id": "nist-ai-100-1-p039",
+      "status": "included",
+      "section": "profiles",
+      "raw_chars": 470,
+      "normalized_chars": 435
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 40,
+      "page_id": "nist-ai-100-1-p040",
+      "status": "included",
+      "section": "appendix_a",
+      "raw_chars": 3128,
+      "normalized_chars": 3085
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 41,
+      "page_id": "nist-ai-100-1-p041",
+      "status": "included",
+      "section": "appendix_a",
+      "raw_chars": 3027,
+      "normalized_chars": 2989
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 42,
+      "page_id": "nist-ai-100-1-p042",
+      "status": "included",
+      "section": "appendix_a",
+      "raw_chars": 2063,
+      "normalized_chars": 2027
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 43,
+      "page_id": "nist-ai-100-1-p043",
+      "status": "included",
+      "section": "appendix_b",
+      "raw_chars": 2707,
+      "normalized_chars": 2660
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 44,
+      "page_id": "nist-ai-100-1-p044",
+      "status": "included",
+      "section": "appendix_b",
+      "raw_chars": 2644,
+      "normalized_chars": 2594
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 45,
+      "page_id": "nist-ai-100-1-p045",
+      "status": "included",
+      "section": "appendix_c",
+      "raw_chars": 2704,
+      "normalized_chars": 2667
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 46,
+      "page_id": "nist-ai-100-1-p046",
+      "status": "included",
+      "section": "appendix_c",
+      "raw_chars": 2164,
+      "normalized_chars": 2126
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 47,
+      "page_id": "nist-ai-100-1-p047",
+      "status": "included",
+      "section": "appendix_d",
+      "raw_chars": 2454,
+      "normalized_chars": 2415
+    },
+    {
+      "document_id": "nist-ai-100-1",
+      "source": "starter/data/NIST.AI.100-1.pdf",
+      "physical_page": 48,
+      "status": "excluded",
+      "reason": "back_cover"
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 1,
+      "status": "excluded",
+      "reason": "cover_page"
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 2,
+      "status": "excluded",
+      "reason": "title_doi_publication_notice"
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 3,
+      "status": "excluded",
+      "reason": "front_matter_acknowledgments_and_disclaimer"
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 4,
+      "status": "excluded",
+      "reason": "table_of_contents"
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 5,
+      "page_id": "nist-ai-600-1-p005",
+      "status": "included",
+      "section": "introduction",
+      "raw_chars": 2752,
+      "normalized_chars": 2729
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 6,
+      "page_id": "nist-ai-600-1-p006",
+      "status": "included",
+      "section": "introduction",
+      "raw_chars": 3361,
+      "normalized_chars": 3319
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 7,
+      "page_id": "nist-ai-600-1-p007",
+      "status": "included",
+      "section": "gai_risks_overview",
+      "raw_chars": 3659,
+      "normalized_chars": 3629
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 8,
+      "page_id": "nist-ai-600-1-p008",
+      "status": "included",
+      "section": "gai_risks_overview",
+      "raw_chars": 3549,
+      "normalized_chars": 3516
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 9,
+      "page_id": "nist-ai-600-1-p009",
+      "status": "included",
+      "section": "gai_risks_overview",
+      "raw_chars": 3293,
+      "normalized_chars": 3259
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 10,
+      "page_id": "nist-ai-600-1-p010",
+      "status": "included",
+      "section": "gai_risks_overview",
+      "raw_chars": 3255,
+      "normalized_chars": 3219
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 11,
+      "page_id": "nist-ai-600-1-p011",
+      "status": "included",
+      "section": "gai_risks_overview",
+      "raw_chars": 3490,
+      "normalized_chars": 3455
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 12,
+      "page_id": "nist-ai-600-1-p012",
+      "status": "included",
+      "section": "gai_risks_overview",
+      "raw_chars": 3386,
+      "normalized_chars": 3357
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 13,
+      "page_id": "nist-ai-600-1-p013",
+      "status": "included",
+      "section": "gai_risks_overview",
+      "raw_chars": 2933,
+      "normalized_chars": 2905
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 14,
+      "page_id": "nist-ai-600-1-p014",
+      "status": "included",
+      "section": "gai_risks_overview",
+      "raw_chars": 3257,
+      "normalized_chars": 3226
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 15,
+      "page_id": "nist-ai-600-1-p015",
+      "status": "included",
+      "section": "gai_risks_overview",
+      "raw_chars": 3327,
+      "normalized_chars": 3291
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 16,
+      "page_id": "nist-ai-600-1-p016",
+      "status": "included",
+      "section": "gai_risks_overview",
+      "raw_chars": 2957,
+      "normalized_chars": 2919
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 17,
+      "page_id": "nist-ai-600-1-p017",
+      "status": "included",
+      "section": "gai_risks_overview",
+      "raw_chars": 1914,
+      "normalized_chars": 1871
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 18,
+      "page_id": "nist-ai-600-1-p018",
+      "status": "included",
+      "section": "govern",
+      "raw_chars": 2615,
+      "normalized_chars": 2574
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 19,
+      "page_id": "nist-ai-600-1-p019",
+      "status": "included",
+      "section": "govern",
+      "raw_chars": 2228,
+      "normalized_chars": 2186
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 20,
+      "page_id": "nist-ai-600-1-p020",
+      "status": "included",
+      "section": "govern",
+      "raw_chars": 2345,
+      "normalized_chars": 2314
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 21,
+      "page_id": "nist-ai-600-1-p021",
+      "status": "included",
+      "section": "govern",
+      "raw_chars": 2577,
+      "normalized_chars": 2544
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 22,
+      "page_id": "nist-ai-600-1-p022",
+      "status": "included",
+      "section": "govern",
+      "raw_chars": 2640,
+      "normalized_chars": 2605
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 23,
+      "page_id": "nist-ai-600-1-p023",
+      "status": "included",
+      "section": "govern",
+      "raw_chars": 1866,
+      "normalized_chars": 1836
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 24,
+      "page_id": "nist-ai-600-1-p024",
+      "status": "included",
+      "section": "govern",
+      "raw_chars": 2285,
+      "normalized_chars": 2254
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 25,
+      "page_id": "nist-ai-600-1-p025",
+      "status": "included",
+      "section": "govern",
+      "raw_chars": 2732,
+      "normalized_chars": 2688
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 26,
+      "page_id": "nist-ai-600-1-p026",
+      "status": "included",
+      "section": "govern",
+      "raw_chars": 3000,
+      "normalized_chars": 2962
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 27,
+      "page_id": "nist-ai-600-1-p027",
+      "status": "included",
+      "section": "map",
+      "raw_chars": 2554,
+      "normalized_chars": 2520
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 28,
+      "page_id": "nist-ai-600-1-p028",
+      "status": "included",
+      "section": "map",
+      "raw_chars": 2073,
+      "normalized_chars": 2045
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 29,
+      "page_id": "nist-ai-600-1-p029",
+      "status": "included",
+      "section": "map",
+      "raw_chars": 2319,
+      "normalized_chars": 2301
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 30,
+      "page_id": "nist-ai-600-1-p030",
+      "status": "included",
+      "section": "map",
+      "raw_chars": 2553,
+      "normalized_chars": 2519
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 31,
+      "page_id": "nist-ai-600-1-p031",
+      "status": "included",
+      "section": "map",
+      "raw_chars": 2468,
+      "normalized_chars": 2438
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 32,
+      "page_id": "nist-ai-600-1-p032",
+      "status": "included",
+      "section": "map",
+      "raw_chars": 2448,
+      "normalized_chars": 2416
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 33,
+      "page_id": "nist-ai-600-1-p033",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 2784,
+      "normalized_chars": 2749
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 34,
+      "page_id": "nist-ai-600-1-p034",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 2145,
+      "normalized_chars": 2118
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 35,
+      "page_id": "nist-ai-600-1-p035",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 1862,
+      "normalized_chars": 1839
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 36,
+      "page_id": "nist-ai-600-1-p036",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 2458,
+      "normalized_chars": 2423
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 37,
+      "page_id": "nist-ai-600-1-p037",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 2874,
+      "normalized_chars": 2843
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 38,
+      "page_id": "nist-ai-600-1-p038",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 1390,
+      "normalized_chars": 1370
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 39,
+      "page_id": "nist-ai-600-1-p039",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 2249,
+      "normalized_chars": 2218
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 40,
+      "page_id": "nist-ai-600-1-p040",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 3045,
+      "normalized_chars": 3005
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 41,
+      "page_id": "nist-ai-600-1-p041",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 1390,
+      "normalized_chars": 1371
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 42,
+      "page_id": "nist-ai-600-1-p042",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 2173,
+      "normalized_chars": 2140
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 43,
+      "page_id": "nist-ai-600-1-p043",
+      "status": "included",
+      "section": "measure",
+      "raw_chars": 2754,
+      "normalized_chars": 2715
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 44,
+      "page_id": "nist-ai-600-1-p044",
+      "status": "included",
+      "section": "manage",
+      "raw_chars": 2489,
+      "normalized_chars": 2456
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 45,
+      "page_id": "nist-ai-600-1-p045",
+      "status": "included",
+      "section": "manage",
+      "raw_chars": 2575,
+      "normalized_chars": 2539
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 46,
+      "page_id": "nist-ai-600-1-p046",
+      "status": "included",
+      "section": "manage",
+      "raw_chars": 2704,
+      "normalized_chars": 2670
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 47,
+      "page_id": "nist-ai-600-1-p047",
+      "status": "included",
+      "section": "manage",
+      "raw_chars": 2596,
+      "normalized_chars": 2565
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 48,
+      "page_id": "nist-ai-600-1-p048",
+      "status": "included",
+      "section": "manage",
+      "raw_chars": 2589,
+      "normalized_chars": 2561
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 49,
+      "page_id": "nist-ai-600-1-p049",
+      "status": "included",
+      "section": "manage",
+      "raw_chars": 2308,
+      "normalized_chars": 2281
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 50,
+      "page_id": "nist-ai-600-1-p050",
+      "status": "included",
+      "section": "manage",
+      "raw_chars": 387,
+      "normalized_chars": 371
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 51,
+      "page_id": "nist-ai-600-1-p051",
+      "status": "included",
+      "section": "appendix_a",
+      "raw_chars": 2989,
+      "normalized_chars": 2957
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 52,
+      "page_id": "nist-ai-600-1-p052",
+      "status": "included",
+      "section": "appendix_a",
+      "raw_chars": 2879,
+      "normalized_chars": 2835
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 53,
+      "page_id": "nist-ai-600-1-p053",
+      "status": "included",
+      "section": "appendix_a",
+      "raw_chars": 3142,
+      "normalized_chars": 3109
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 54,
+      "page_id": "nist-ai-600-1-p054",
+      "status": "included",
+      "section": "appendix_a",
+      "raw_chars": 3466,
+      "normalized_chars": 3434
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 55,
+      "page_id": "nist-ai-600-1-p055",
+      "status": "included",
+      "section": "appendix_a",
+      "raw_chars": 3424,
+      "normalized_chars": 3387
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 56,
+      "page_id": "nist-ai-600-1-p056",
+      "status": "included",
+      "section": "appendix_a",
+      "raw_chars": 3284,
+      "normalized_chars": 3251
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 57,
+      "page_id": "nist-ai-600-1-p057",
+      "status": "included",
+      "section": "appendix_a",
+      "raw_chars": 1446,
+      "normalized_chars": 1423
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 58,
+      "status": "excluded",
+      "reason": "appendix_b_references_only"
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 59,
+      "status": "excluded",
+      "reason": "appendix_b_references_only"
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 60,
+      "status": "excluded",
+      "reason": "appendix_b_references_only"
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 61,
+      "status": "excluded",
+      "reason": "appendix_b_references_only"
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 62,
+      "status": "excluded",
+      "reason": "appendix_b_references_only"
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 63,
+      "status": "excluded",
+      "reason": "appendix_b_references_only"
+    },
+    {
+      "document_id": "nist-ai-600-1",
+      "source": "starter/data/NIST.AI.600-1.pdf",
+      "physical_page": 64,
+      "status": "excluded",
+      "reason": "appendix_b_references_only"
+    }
+  ]
+}

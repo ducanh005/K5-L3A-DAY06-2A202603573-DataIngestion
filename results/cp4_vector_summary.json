@@ -1,0 +1,605 @@
+{
+  "embedding": {
+    "provider": "google-gemini",
+    "model": "gemini-embedding-001",
+    "dimensions": 768,
+    "normalized_non_default_dims": true,
+    "document_task_type": "RETRIEVAL_DOCUMENT",
+    "query_task_type": "RETRIEVAL_QUERY",
+    "distance_metric": "cosine",
+    "api_calls": 24,
+    "document_texts_embedded": 926,
+    "query_texts_embedded": 4,
+    "input_chars": 495841,
+    "reported_tokens": 0,
+    "estimated_tokens": 124160,
+    "retries": 0,
+    "api_embed_seconds": 32.758,
+    "pricing_reference_usd_per_1m_tokens": 0.15,
+    "estimated_paid_tier_cost_usd": 0.018624,
+    "free_tier_cost_usd": 0.0
+  },
+  "database": {
+    "engine": "PostgreSQL + pgvector",
+    "schema_seconds": 0.0276,
+    "tables": {
+      "A": "day6_chunks_a",
+      "B": "day6_chunks_b",
+      "C": "day6_chunks_c"
+    },
+    "counts": {
+      "A": 556,
+      "B": 370,
+      "C": 370
+    }
+  },
+  "strategies": {
+    "A": {
+      "params": {
+        "method": "fixed_size",
+        "size": 500,
+        "overlap": 50,
+        "metadata_filter": false
+      },
+      "stats": {
+        "chunk_count": 556,
+        "total_chars": 258800,
+        "min_chars": 52,
+        "mean_chars": 465.5,
+        "median_chars": 500.0,
+        "p95_chars": 500,
+        "max_chars": 500
+      },
+      "embed_seconds": 18.872,
+      "upsert_seconds": 0.439,
+      "db_rows": 556
+    },
+    "B": {
+      "params": {
+        "method": "by_paragraph",
+        "max_size": 900,
+        "metadata_filter": false
+      },
+      "stats": {
+        "chunk_count": 370,
+        "total_chars": 236497,
+        "min_chars": 67,
+        "mean_chars": 639.2,
+        "median_chars": 694.5,
+        "p95_chars": 884,
+        "max_chars": 900
+      },
+      "embed_seconds": 12.559,
+      "upsert_seconds": 0.257,
+      "db_rows": 370
+    },
+    "C": {
+      "params": {
+        "method": "by_paragraph",
+        "max_size": 900,
+        "metadata_filter": true,
+        "reused_embeddings_from": "B"
+      },
+      "stats": {
+        "chunk_count": 370,
+        "total_chars": 236497,
+        "min_chars": 67,
+        "mean_chars": 639.2,
+        "median_chars": 694.5,
+        "p95_chars": 884,
+        "max_chars": 900
+      },
+      "embed_seconds": 0.0,
+      "upsert_seconds": 0.269,
+      "db_rows": 370
+    }
+  },
+  "reingest_verification": {
+    "counts_before": {
+      "A": 556,
+      "B": 370,
+      "C": 370
+    },
+    "counts_after": {
+      "A": 556,
+      "B": 370,
+      "C": 370
+    },
+    "idempotent_exact_match": true,
+    "identical_reingest_deleted_obsolete": {
+      "A": 0,
+      "B": 0,
+      "C": 0
+    },
+    "obsolete_cleanup_probe": {
+      "verified": true,
+      "initial_rows": 2,
+      "deleted_obsolete_rows": 2,
+      "rows_after_update": 1
+    }
+  },
+  "top3_dev_smoke_checks": [
+    {
+      "question_id": "q01",
+      "split": "dev",
+      "question": "How does the NIST AI RMF define an AI system?",
+      "benchmark_filter": null,
+      "strategies": {
+        "A": {
+          "filter_applied": null,
+          "search_ms": 29.9,
+          "top3": [
+            {
+              "rank": 1,
+              "chunk_id": "A:nist-ai-100-1:p006:c02",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 6,
+              "score": 0.7717,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "executive_summary"
+            },
+            {
+              "rank": 2,
+              "chunk_id": "A:nist-ai-100-1:p006:c03",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 6,
+              "score": 0.752,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "executive_summary"
+            },
+            {
+              "rank": 3,
+              "chunk_id": "A:nist-ai-100-1:p007:c05",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 7,
+              "score": 0.7479,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "executive_summary"
+            }
+          ]
+        },
+        "B": {
+          "filter_applied": null,
+          "search_ms": 27.26,
+          "top3": [
+            {
+              "rank": 1,
+              "chunk_id": "B:nist-ai-100-1:p006:c02",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 6,
+              "score": 0.8348,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "executive_summary"
+            },
+            {
+              "rank": 2,
+              "chunk_id": "B:nist-ai-100-1:p014:c04",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 14,
+              "score": 0.7507,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "audience"
+            },
+            {
+              "rank": 3,
+              "chunk_id": "B:nist-ai-100-1:p008:c01",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 8,
+              "score": 0.745,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "executive_summary"
+            }
+          ]
+        },
+        "C": {
+          "filter_applied": null,
+          "search_ms": 13.25,
+          "top3": [
+            {
+              "rank": 1,
+              "chunk_id": "C:nist-ai-100-1:p006:c02",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 6,
+              "score": 0.8348,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "executive_summary"
+            },
+            {
+              "rank": 2,
+              "chunk_id": "C:nist-ai-100-1:p014:c04",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 14,
+              "score": 0.7507,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "audience"
+            },
+            {
+              "rank": 3,
+              "chunk_id": "C:nist-ai-100-1:p008:c01",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 8,
+              "score": 0.745,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "executive_summary"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "q12",
+      "split": "dev",
+      "question": "In the 2023 AI RMF Core Framework under the Measure function, what does MEASURE 1.1 require for AI risks or trustworthiness characteristics that will not or cannot be measured?",
+      "benchmark_filter": {
+        "year": 2023,
+        "section": "measure"
+      },
+      "strategies": {
+        "A": {
+          "filter_applied": null,
+          "search_ms": 35.77,
+          "top3": [
+            {
+              "rank": 1,
+              "chunk_id": "A:nist-ai-600-1:p033:c02",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 33,
+              "score": 0.7736,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "measure"
+            },
+            {
+              "rank": 2,
+              "chunk_id": "A:nist-ai-600-1:p033:c03",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 33,
+              "score": 0.7692,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "measure"
+            },
+            {
+              "rank": 3,
+              "chunk_id": "A:nist-ai-100-1:p034:c02",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 34,
+              "score": 0.7614,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "measure"
+            }
+          ]
+        },
+        "B": {
+          "filter_applied": null,
+          "search_ms": 37.24,
+          "top3": [
+            {
+              "rank": 1,
+              "chunk_id": "B:nist-ai-600-1:p033:c02",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 33,
+              "score": 0.7815,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "measure"
+            },
+            {
+              "rank": 2,
+              "chunk_id": "B:nist-ai-600-1:p032:c03",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 32,
+              "score": 0.7591,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "measure"
+            },
+            {
+              "rank": 3,
+              "chunk_id": "B:nist-ai-100-1:p033:c03",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 33,
+              "score": 0.7462,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "measure"
+            }
+          ]
+        },
+        "C": {
+          "filter_applied": {
+            "year": 2023,
+            "section": "measure"
+          },
+          "search_ms": 27.48,
+          "top3": [
+            {
+              "rank": 1,
+              "chunk_id": "C:nist-ai-100-1:p033:c03",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 33,
+              "score": 0.7462,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "measure"
+            },
+            {
+              "rank": 2,
+              "chunk_id": "C:nist-ai-100-1:p034:c01",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 34,
+              "score": 0.7362,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "measure"
+            },
+            {
+              "rank": 3,
+              "chunk_id": "C:nist-ai-100-1:p033:c05",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 33,
+              "score": 0.7337,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "measure"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "q13",
+      "split": "dev",
+      "question": "In the core AI RMF 1.0 framework (not the GAI profile) under the Manage function, what mechanisms must post-deployment AI system monitoring plans include under MANAGE 4.1?",
+      "benchmark_filter": {
+        "document_type": "core_framework",
+        "section": "manage"
+      },
+      "strategies": {
+        "A": {
+          "filter_applied": null,
+          "search_ms": 19.08,
+          "top3": [
+            {
+              "rank": 1,
+              "chunk_id": "A:nist-ai-600-1:p048:c03",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 48,
+              "score": 0.8155,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "manage"
+            },
+            {
+              "rank": 2,
+              "chunk_id": "A:nist-ai-100-1:p038:c02",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 38,
+              "score": 0.7936,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "manage"
+            },
+            {
+              "rank": 3,
+              "chunk_id": "A:nist-ai-100-1:p038:c01",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 38,
+              "score": 0.7929,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "manage"
+            }
+          ]
+        },
+        "B": {
+          "filter_applied": null,
+          "search_ms": 30.98,
+          "top3": [
+            {
+              "rank": 1,
+              "chunk_id": "B:nist-ai-100-1:p038:c01",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 38,
+              "score": 0.7927,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "manage"
+            },
+            {
+              "rank": 2,
+              "chunk_id": "B:nist-ai-600-1:p048:c02",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 48,
+              "score": 0.7907,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "manage"
+            },
+            {
+              "rank": 3,
+              "chunk_id": "B:nist-ai-600-1:p049:c01",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 49,
+              "score": 0.7881,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "manage"
+            }
+          ]
+        },
+        "C": {
+          "filter_applied": {
+            "document_type": "core_framework",
+            "section": "manage"
+          },
+          "search_ms": 29.33,
+          "top3": [
+            {
+              "rank": 1,
+              "chunk_id": "C:nist-ai-100-1:p038:c01",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 38,
+              "score": 0.7927,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "manage"
+            },
+            {
+              "rank": 2,
+              "chunk_id": "C:nist-ai-100-1:p037:c03",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 37,
+              "score": 0.7802,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "manage"
+            },
+            {
+              "rank": 3,
+              "chunk_id": "C:nist-ai-100-1:p036:c04",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 36,
+              "score": 0.7673,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "manage"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "question_id": "q17",
+      "split": "dev",
+      "question": "In the Generative AI Profile under the Govern function, what balance must transparency policies under GV-1.2-001 achieve regarding training data origin?",
+      "benchmark_filter": {
+        "document_type": "generative_ai_profile",
+        "section": "govern"
+      },
+      "strategies": {
+        "A": {
+          "filter_applied": null,
+          "search_ms": 36.47,
+          "top3": [
+            {
+              "rank": 1,
+              "chunk_id": "A:nist-ai-600-1:p018:c01",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 18,
+              "score": 0.773,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "govern"
+            },
+            {
+              "rank": 2,
+              "chunk_id": "A:nist-ai-600-1:p047:c03",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 47,
+              "score": 0.7609,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "manage"
+            },
+            {
+              "rank": 3,
+              "chunk_id": "A:nist-ai-100-1:p021:c03",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 21,
+              "score": 0.7284,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "ai_risks_and_trustworthiness"
+            }
+          ]
+        },
+        "B": {
+          "filter_applied": null,
+          "search_ms": 30.19,
+          "top3": [
+            {
+              "rank": 1,
+              "chunk_id": "B:nist-ai-100-1:p021:c03",
+              "source": "starter/data/NIST.AI.100-1.pdf",
+              "page": 21,
+              "score": 0.7627,
+              "year": 2023,
+              "document_type": "core_framework",
+              "section": "ai_risks_and_trustworthiness"
+            },
+            {
+              "rank": 2,
+              "chunk_id": "B:nist-ai-600-1:p018:c01",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 18,
+              "score": 0.7496,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "govern"
+            },
+            {
+              "rank": 3,
+              "chunk_id": "B:nist-ai-600-1:p047:c02",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 47,
+              "score": 0.7493,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "manage"
+            }
+          ]
+        },
+        "C": {
+          "filter_applied": {
+            "document_type": "generative_ai_profile",
+            "section": "govern"
+          },
+          "search_ms": 30.42,
+          "top3": [
+            {
+              "rank": 1,
+              "chunk_id": "C:nist-ai-600-1:p018:c01",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 18,
+              "score": 0.7496,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "govern"
+            },
+            {
+              "rank": 2,
+              "chunk_id": "C:nist-ai-600-1:p020:c03",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 20,
+              "score": 0.727,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "govern"
+            },
+            {
+              "rank": 3,
+              "chunk_id": "C:nist-ai-600-1:p025:c02",
+              "source": "starter/data/NIST.AI.600-1.pdf",
+              "page": 25,
+              "score": 0.7098,
+              "year": 2024,
+              "document_type": "generative_ai_profile",
+              "section": "govern"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

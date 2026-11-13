@@ -1,4 +1,6 @@
-# Core setup and PDF parsing. Choose and install an embedding SDK separately.
+# Core setup, PDF parsing, and local/API dependencies.
+google-genai>=2.30.1,<4
 psycopg[binary]==3.3.8
+pymupdf>=1.24,<2
 pypdf>=5,<7
 python-dotenv>=1,<2
