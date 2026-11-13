@@ -11,6 +11,7 @@ import pymupdf
 
 from src.chunking import by_paragraph, fixed_size
 from src.embeddings import MyEmbedder
+from src.evaluation import evaluate_query, summarize
 from src.ingestion import load_pdf, normalize_text
 from src.models import Chunk, DocumentPage
 from src.store import PgVectorStore
@@ -265,6 +266,86 @@ class Cp4EmbeddingsAndStoreTests(unittest.TestCase):
             self.assertEqual(store.count("B"), 2)
         finally:
             store.drop_tables()
+
+
+class Cp5EvaluationTests(unittest.TestCase):
+    def test_evaluate_query_exact_alternative_split_and_filter_compliance(self) -> None:
+        q = {
+            "id": "q_sample",
+            "type": "metadata_filter",
+            "split": "dev",
+            "question": "Sample question?",
+            "expected_answer": "Expected answer.",
+            "gold_evidences": [
+                {"source_id": "doc1", "page": 6},
+                {"source_id": "doc2", "page": 10},
+            ],
+            "evidence_quote": "An AI system is engineered to produce outputs and operates safely.",
+            "filter": {"year": 2023, "section": "govern"},
+        }
+
+        # Case 1: Alternative gold_evidences page matches full quote at rank 2 (hit@1=False, hit@3=True).
+        hits_alt = [
+            {
+                "chunk_id": "C:doc3:p001:c01",
+                "document_id": "doc3",
+                "source": "data/doc3.pdf",
+                "page": 1,
+                "score": 0.85,
+                "distance": 0.15,
+                "metadata": {"year": 2023, "section": "govern"},
+                "text": "Unrelated chunk text.",
+            },
+            {
+                "chunk_id": "C:doc2:p010:c01",
+                "document_id": "doc2",
+                "source": "data/doc2.pdf",
+                "page": 10,
+                "score": 0.80,
+                "distance": 0.20,
+                "metadata": {"year": 2023, "section": "govern"},
+                "text": "Context: An AI system is engineered to produce outputs and operates safely. Further notes follow.",
+            },
+        ]
+        tr_alt = evaluate_query(q, hits_alt, strategy="C", applied_filter=q["filter"])
+        self.assertFalse(tr_alt["hit1"])
+        self.assertTrue(tr_alt["hit3"])
+        self.assertTrue(tr_alt["filter_compliant"])
+
+        # Case 2: Evidence split across two overlapping chunks ranked out of page order -> split diagnostic=True.
+        hits_split = [
+            {
+                "chunk_id": "A:doc1:p006:c02",
+                "document_id": "doc1",
+                "source": "data/doc1.pdf",
+                "page": 6,
+                "score": 0.78,
+                "distance": 0.22,
+                "metadata": {"year": 2023, "section": "govern", "chunk_index": 2},
+                "text": "engineered to produce outputs and operates safely.",
+            },
+            {
+                "chunk_id": "A:doc1:p006:c01",
+                "document_id": "doc1",
+                "source": "data/doc1.pdf",
+                "page": 6,
+                "score": 0.75,
+                "distance": 0.25,
+                "metadata": {"year": 2023, "section": "govern", "chunk_index": 1},
+                "text": "An AI system is engineered to pro",
+            },
+        ]
+        tr_split = evaluate_query(q, hits_split, strategy="A", applied_filter=None)
+        self.assertFalse(tr_split["hit3"])
+        self.assertTrue(tr_split["source_page_hit3"])
+        self.assertTrue(tr_split["evidence_split_across_top3"])
+        self.assertIsNone(tr_split["filter_compliant"])
+
+        agg = summarize([tr_alt, tr_split])
+        self.assertEqual(agg["C"]["dev"]["hit3_fraction"], "1/1")
+        self.assertEqual(agg["C"]["dev"]["filter_compliance_fraction"], "1/1")
+        self.assertEqual(agg["A"]["dev"]["split_evidence_count"], 1)
+        self.assertEqual(agg["A"]["dev"]["filter_compliance_fraction"], "N/A")
 
 
 if __name__ == "__main__":

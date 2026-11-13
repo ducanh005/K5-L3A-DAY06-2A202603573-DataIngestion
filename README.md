@@ -45,3 +45,34 @@ Dùng cùng dữ liệu, model và câu hỏi cho cả ba cấu hình. Tách **1
 | Cách nộp bài | [SUBMISSION.md](SUBMISSION.md) |
 
 [data/format-example.json](data/format-example.json) chỉ minh họa định dạng, không phải corpus đủ điều kiện. Phần xử lý và benchmark do bạn tự hiện thực; không bắt buộc xây chatbot.
+
+---
+
+## Tái lập bài làm (Vũ Đức Anh — 2A202603573)
+
+- **Corpus & manifest:** `starter/data/NIST.AI.100-1.pdf` + `starter/data/NIST.AI.600-1.pdf` (95 trang nội dung hợp lệ / 112 trang vật lý), khai báo tại [data/manifest.json](data/manifest.json).
+- **Benchmark:** 22 câu hỏi (`17 dev / 5 test`, `5` câu metadata filter) tại [benchmark/questions.json](benchmark/questions.json).
+- **Mã nguồn & kiểm thử:** [starter/src/](starter/src/) và [starter/tests/test_pipeline.py](starter/tests/test_pipeline.py).
+- **Kết quả, nhật ký & báo cáo:** [artifacts/experiment_log.csv](artifacts/experiment_log.csv), [results/](results/), và báo cáo cá nhân [report/individual/2A202603573_VuDucAnh.md](report/individual/2A202603573_VuDucAnh.md).
+
+### Lệnh chạy đầy đủ (Windows PowerShell, từ thư mục `starter/`)
+
+```powershell
+cd starter
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install -r requirements.txt
+Copy-Item .env.example .env
+# Điền GEMINI_API_KEY của bạn vào starter/.env (không commit .env)
+
+docker compose -p day6_student_starter up -d --wait
+python scripts/check_setup.py
+python -m unittest discover -s tests -v
+
+# Chạy từng bước kiểm chứng hoặc chạy toàn bộ pipeline một lần:
+python scripts/check_cp3.py
+python scripts/check_cp4.py
+python scripts/check_cp5.py
+# Hoặc chạy toàn pipeline (ingest -> chunk -> embed -> pgvector -> evaluate dev/test):
+python -m src.run
+```

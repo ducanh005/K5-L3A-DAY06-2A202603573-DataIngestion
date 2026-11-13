@@ -1,6 +1,6 @@
 {
   "manifest_path": "D:\\AI thuc chien\\K5-L3A-DAY06-2A202603573-DataIngestion\\data\\manifest.json",
-  "pdf_parse_seconds": 0.196,
+  "pdf_parse_seconds": 0.177,
   "included_pages": 95,
   "excluded_pages": 17,
   "empty_or_unreadable_pages": 0,

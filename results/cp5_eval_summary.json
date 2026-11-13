@@ -1,0 +1,270 @@
+{
+  "generated_at": "2026-11-13T12:12:40.572700+00:00",
+  "selection_criterion": "Pre-test selection rule: prioritize Evidence Hit@3 first, then Hit@1 and filter compliance, followed by Coherence/Grounding quality and resource footprint (chunk count, embed time/cost). Strategy hyperparameters were frozen on dev before inspecting test split scores.",
+  "environment": {
+    "python": "3.12.10",
+    "google_genai": "3.0.0",
+    "psycopg": "3.3.8",
+    "pymupdf": "1.28.2",
+    "pypdf": "6.19.0",
+    "postgres_server": "16.16 (Debian 16.16-1.pgdg12+1)",
+    "pgvector": "0.8.7"
+  },
+  "embedding": {
+    "provider": "google-gemini",
+    "model": "gemini-embedding-001",
+    "dimensions": 768,
+    "distance_metric": "cosine",
+    "document_index": {
+      "mode": "reused_verified_pgvector_index",
+      "counts": {
+        "A": 556,
+        "B": 370,
+        "C": 370
+      },
+      "previous_ingest_embedding": {
+        "provider": "google-gemini",
+        "model": "gemini-embedding-001",
+        "dimensions": 768,
+        "normalized_non_default_dims": true,
+        "document_task_type": "RETRIEVAL_DOCUMENT",
+        "query_task_type": "RETRIEVAL_QUERY",
+        "distance_metric": "cosine",
+        "api_calls": 24,
+        "document_texts_embedded": 926,
+        "query_texts_embedded": 4,
+        "input_chars": 495841,
+        "reported_tokens": 0,
+        "estimated_tokens": 124160,
+        "retries": 0,
+        "api_embed_seconds": 32.758,
+        "pricing_reference_usd_per_1m_tokens": 0.15,
+        "estimated_paid_tier_cost_usd": 0.018624,
+        "free_tier_cost_usd": 0.0
+      },
+      "previous_strategy_timings": {
+        "A": {
+          "embed_seconds": 18.872,
+          "upsert_seconds": 0.439
+        },
+        "B": {
+          "embed_seconds": 12.559,
+          "upsert_seconds": 0.257
+        },
+        "C": {
+          "embed_seconds": 0.0,
+          "upsert_seconds": 0.269
+        }
+      }
+    },
+    "query_eval_stats": {
+      "provider": "google-gemini",
+      "model": "gemini-embedding-001",
+      "dimensions": 768,
+      "normalized_non_default_dims": true,
+      "document_task_type": "RETRIEVAL_DOCUMENT",
+      "query_task_type": "RETRIEVAL_QUERY",
+      "api_calls": 22,
+      "document_texts": 0,
+      "query_texts": 22,
+      "input_chars": 2703,
+      "reported_tokens": 0,
+      "estimated_tokens": 681,
+      "elapsed_seconds": 8.381747500505298,
+      "retries": 0
+    }
+  },
+  "corpus_and_chunks": {
+    "included_pages": 95,
+    "chunk_build_seconds": 0.0077,
+    "strategies": {
+      "A": {
+        "chunk_count": 556,
+        "total_chars": 258800,
+        "min_chars": 52,
+        "mean_chars": 465.5,
+        "median_chars": 500.0,
+        "p95_chars": 500,
+        "max_chars": 500
+      },
+      "B": {
+        "chunk_count": 370,
+        "total_chars": 236497,
+        "min_chars": 67,
+        "mean_chars": 639.2,
+        "median_chars": 694.5,
+        "p95_chars": 884,
+        "max_chars": 900
+      },
+      "C": {
+        "chunk_count": 370,
+        "total_chars": 236497,
+        "min_chars": 67,
+        "mean_chars": 639.2,
+        "median_chars": 694.5,
+        "p95_chars": 884,
+        "max_chars": 900
+      }
+    }
+  },
+  "search_latency_ms": {
+    "A": {
+      "mean_ms": 26.05,
+      "max_ms": 42.15,
+      "total_ms": 573.15
+    },
+    "B": {
+      "mean_ms": 25.34,
+      "max_ms": 39.66,
+      "total_ms": 557.52
+    },
+    "C": {
+      "mean_ms": 26.26,
+      "max_ms": 39.62,
+      "total_ms": 577.79
+    }
+  },
+  "metrics": {
+    "A": {
+      "overall": {
+        "total": 22,
+        "hit1_count": 8,
+        "hit1_rate": 0.3636,
+        "hit1_fraction": "8/22",
+        "hit3_count": 10,
+        "hit3_rate": 0.4545,
+        "hit3_fraction": "10/22",
+        "source_page_hit1_fraction": "20/22",
+        "source_page_hit3_fraction": "22/22",
+        "split_evidence_count": 7,
+        "filter_queries": 0,
+        "filter_compliant_count": null,
+        "filter_compliance_fraction": "N/A"
+      },
+      "dev": {
+        "total": 17,
+        "hit1_count": 6,
+        "hit1_rate": 0.3529,
+        "hit1_fraction": "6/17",
+        "hit3_count": 8,
+        "hit3_rate": 0.4706,
+        "hit3_fraction": "8/17",
+        "source_page_hit1_fraction": "15/17",
+        "source_page_hit3_fraction": "17/17",
+        "split_evidence_count": 4,
+        "filter_queries": 0,
+        "filter_compliant_count": null,
+        "filter_compliance_fraction": "N/A"
+      },
+      "test": {
+        "total": 5,
+        "hit1_count": 2,
+        "hit1_rate": 0.4,
+        "hit1_fraction": "2/5",
+        "hit3_count": 2,
+        "hit3_rate": 0.4,
+        "hit3_fraction": "2/5",
+        "source_page_hit1_fraction": "5/5",
+        "source_page_hit3_fraction": "5/5",
+        "split_evidence_count": 3,
+        "filter_queries": 0,
+        "filter_compliant_count": null,
+        "filter_compliance_fraction": "N/A"
+      }
+    },
+    "B": {
+      "overall": {
+        "total": 22,
+        "hit1_count": 15,
+        "hit1_rate": 0.6818,
+        "hit1_fraction": "15/22",
+        "hit3_count": 19,
+        "hit3_rate": 0.8636,
+        "hit3_fraction": "19/22",
+        "source_page_hit1_fraction": "18/22",
+        "source_page_hit3_fraction": "20/22",
+        "split_evidence_count": 0,
+        "filter_queries": 0,
+        "filter_compliant_count": null,
+        "filter_compliance_fraction": "N/A"
+      },
+      "dev": {
+        "total": 17,
+        "hit1_count": 12,
+        "hit1_rate": 0.7059,
+        "hit1_fraction": "12/17",
+        "hit3_count": 14,
+        "hit3_rate": 0.8235,
+        "hit3_fraction": "14/17",
+        "source_page_hit1_fraction": "14/17",
+        "source_page_hit3_fraction": "15/17",
+        "split_evidence_count": 0,
+        "filter_queries": 0,
+        "filter_compliant_count": null,
+        "filter_compliance_fraction": "N/A"
+      },
+      "test": {
+        "total": 5,
+        "hit1_count": 3,
+        "hit1_rate": 0.6,
+        "hit1_fraction": "3/5",
+        "hit3_count": 5,
+        "hit3_rate": 1.0,
+        "hit3_fraction": "5/5",
+        "source_page_hit1_fraction": "4/5",
+        "source_page_hit3_fraction": "5/5",
+        "split_evidence_count": 0,
+        "filter_queries": 0,
+        "filter_compliant_count": null,
+        "filter_compliance_fraction": "N/A"
+      }
+    },
+    "C": {
+      "overall": {
+        "total": 22,
+        "hit1_count": 17,
+        "hit1_rate": 0.7727,
+        "hit1_fraction": "17/22",
+        "hit3_count": 20,
+        "hit3_rate": 0.9091,
+        "hit3_fraction": "20/22",
+        "source_page_hit1_fraction": "20/22",
+        "source_page_hit3_fraction": "21/22",
+        "split_evidence_count": 0,
+        "filter_queries": 5,
+        "filter_compliant_count": 5,
+        "filter_compliance_fraction": "5/5"
+      },
+      "dev": {
+        "total": 17,
+        "hit1_count": 13,
+        "hit1_rate": 0.7647,
+        "hit1_fraction": "13/17",
+        "hit3_count": 15,
+        "hit3_rate": 0.8824,
+        "hit3_fraction": "15/17",
+        "source_page_hit1_fraction": "15/17",
+        "source_page_hit3_fraction": "16/17",
+        "split_evidence_count": 0,
+        "filter_queries": 3,
+        "filter_compliant_count": 3,
+        "filter_compliance_fraction": "3/3"
+      },
+      "test": {
+        "total": 5,
+        "hit1_count": 4,
+        "hit1_rate": 0.8,
+        "hit1_fraction": "4/5",
+        "hit3_count": 5,
+        "hit3_rate": 1.0,
+        "hit3_fraction": "5/5",
+        "source_page_hit1_fraction": "5/5",
+        "source_page_hit3_fraction": "5/5",
+        "split_evidence_count": 0,
+        "filter_queries": 2,
+        "filter_compliant_count": 2,
+        "filter_compliance_fraction": "2/2"
+      }
+    }
+  }
+}

@@ -60,6 +60,9 @@ docker compose -p day6_student_starter stop
 2. Hoàn thiện từng hàm TODO trong `src/`. Lưu ID tài liệu, nguồn, trang/vị trí và ít nhất một trường filter có ích.
 3. Xây ít nhất ba cấu hình; ví dụ A fixed-size, B theo đoạn, C như B nhưng có filter. Cần cùng corpus, model và benchmark; nạp lại không nhân đôi và xử lý chunk cũ khi dữ liệu đổi.
 4. Tự viết ít nhất 20 câu hỏi kèm evidence, tách dev/test trước khi thử theo [BENCHMARK.md](../BENCHMARK.md). Lưu trace top-3 và báo cáo đủ năm tiêu chí.
-5. Sau khi hoàn thiện, chạy `python -m src.run` từ thư mục `starter/`. Trước khi làm TODO, lệnh này **chủ động báo `NotImplementedError`**.
+5. Sau khi hoàn thiện, chạy từ thư mục `starter/`:
+   - Chạy bộ kiểm thử: `python -m unittest discover -s tests -v`
+   - Chạy full pipeline (ingest → chunk A/B/C → embed Gemini → lưu PostgreSQL `pgvector` → đánh giá dev/test & xuất trace/audit): `python -m src.run` (hoặc thêm `--reuse-existing-index` nếu index `day6_chunks_a/b/c` đã khớp corpus).
+   - Các script kiểm tra theo checkpoint: `scripts/check_cp3.py`, `scripts/check_cp4.py`, `scripts/check_cp5.py`.
 
 Lưu code, cấu hình, kết quả và lệnh chạy để người chấm tái lập; không commit key, dữ liệu mật hoặc dữ liệu không có quyền chia sẻ.
